@@ -1,0 +1,20 @@
+{
+  "model_type": "mobilenet_v2",
+  "hidden_act": "relu6",
+  "hidden_size": 1280,
+  "image_size": 160,
+  "initializer_range": 0.02,
+  "num_channels": 3,
+  "num_classes": 2,
+  "id2label": {
+    "0": "indoor",
+    "1": "outdoor"
+  },
+  "label2id": {
+    "indoor": 0,
+    "outdoor": 1
+  },
+  "architectures": [
+    "MobileNetV2ForImageClassification"
+  ]
+}
