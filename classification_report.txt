@@ -1,0 +1,11 @@
+Final Model Accuracy: 96.25%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      indoor       0.96      0.96      0.96       200
+     outdoor       0.96      0.96      0.96       200
+
+    accuracy                           0.96       400
+   macro avg       0.96      0.96      0.96       400
+weighted avg       0.96      0.96      0.96       400
