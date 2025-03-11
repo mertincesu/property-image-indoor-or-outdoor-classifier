@@ -1,26 +1,8 @@
----
-license: mit
-tags:
-  - image-classification
-  - indoor-outdoor
-  - real-estate
-  - mobilenetv2
-  - property-classifier
-  - property-classification
-  - binary-classifier
-datasets:
-  - airbnb-property-images
-pipeline_tag: image-classification
-widget:
-  - src: https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/indoor-example.jpg
-    example_title: Indoor Example
-  - src: https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/outdoor-example.jpg
-    example_title: Outdoor Example
----
-
 # Indoor vs Outdoor Classifier
 
 A binary image classifier that determines whether a property image is indoor or outdoor with 96% accuracy.
+
+Huggingface URL: https://huggingface.co/mertincesu/property-indoor-or-outdoor-classifier
 
 ## Model Details
 
