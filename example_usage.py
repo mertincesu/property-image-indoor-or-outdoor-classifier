@@ -6,6 +6,12 @@ from PIL import Image
 import io
 
 def classify_image_huggingface(image_path, repo_id="mertincesu/property-indoor-or-outdoor-classifier"):
+    # Automatically select the best available device
+    device = torch.device("cuda" if torch.cuda.is_available() else 
+                           "mps" if torch.backends.mps.is_available() else 
+                           "cpu")
+    print(f"Using device: {device}")
+
     # Define model structure
     model = models.mobilenet_v2(weights=None)
     num_ftrs = model.classifier[1].in_features
