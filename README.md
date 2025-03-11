@@ -5,6 +5,9 @@ tags:
   - indoor-outdoor
   - real-estate
   - mobilenetv2
+  - property-classifier
+  - property-classification
+  - binary-classifier
 datasets:
   - airbnb-property-images
 pipeline_tag: image-classification
