@@ -1,51 +1,33 @@
-Indoor vs Outdoor Classifier
+---
+license: mit
+tags:
+  - image-classification
+  - computer-vision
+  - binary-classifier
+model-details:
+  architecture: MobileNetV2
+  classes: ["Indoor", "Outdoor"]
+  accuracy: 96%
+  input-size: "160x160 RGB"
+---
 
-A binary image classifier that determines whether a property image is indoor or outdoor with 96% accuracy.
+# Indoor vs Outdoor Classifier
 
-Model Details
+A binary image classifier that determines whether a property image is **indoor** or **outdoor** with **96% accuracy**.
 
-Model Type: MobileNetV2-based binary classifier
+## Model Details
 
-Classes: Indoor, Outdoor
+- **Model Type:** MobileNetV2-based binary classifier  
+- **Classes:** Indoor, Outdoor  
+- **Accuracy:** 96% on validation set  
+- **Input Size:** 160x160 RGB images  
 
-Accuracy: 96% on validation set
+## Training Data
 
-Input Size: 160x160 RGB images
+The model was trained on **2,000 curated Airbnb property images**, split evenly between indoor and outdoor scenes. The dataset was manually verified to ensure high-quality training examples.
 
-Training Data
+## Usage
 
-The model was trained on 2,000 curated Airbnb property images, split evenly between indoor and outdoor scenes. The dataset was manually verified to ensure high-quality training examples.
-
-Usage
-
-Install Dependencies
+### Install Dependencies
 
 pip install transformers pillow
-
-Load Model and Classify an Image
-
-from transformers import pipeline
-from PIL import Image
-
-# Load model
-classifier = pipeline("image-classification", model="yourusername/indoor-outdoor-classifier")
-
-# Classify an image
-image = Image.open("path/to/your/image.jpg")
-result = classifier(image)
-
-print(f"Class: {result[0]['label']}, Confidence: {result[0]['score']:.2%}")
-
-Use Cases
-
-Real estate listing automation: Automatically categorize property images.
-
-Property image organization: Sort and tag images efficiently.
-
-Virtual tour preparation: Distinguish between indoor and outdoor shots.
-
-Interior design vs. architecture applications: Separate indoor and outdoor visuals for better analysis.
-
-License
-
-This model is released under the MIT License.
